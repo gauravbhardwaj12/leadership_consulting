@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FBFBF9;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  /* Subtle executive hairline border */
+  .border-hairline {
+    border-color: rgba(226, 232, 240, 0.85);
+  }
+
+  /* Sophisticated text gradient for subtle accent */
+  .text-gradient-cognac {
+    background: linear-gradient(135deg, #0F172A 0%, #334155 70%, #9A5B2D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Image zoom on hover */
+  .img-zoom-hover {
+    overflow: hidden;
+  }
+  .img-zoom-hover img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .img-zoom-hover:hover img {
+    transform: scale(1.04);
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
